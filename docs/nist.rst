@@ -1,9 +1,19 @@
 Palo Alto Firewall NIST 800.53 V5
 ==================================
+
+
+
+
 Terms of Use
 ------------
-AC-1
-----
+
+
+
+
+Control or Control Enhancement Identifier
+-----------------------------------------
+AC-1 Policy and Procedures
+
 
 Control or Control Name
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,8 +58,9 @@ Products
 N/A
 
 
-AC-2
-----
+Control or Control Enhancement Identifier
+-----------------------------------------
+AC-2 Account Management
 
 
 Control or Control Name
@@ -96,7 +107,7 @@ AC-3, AC-5, AC-6, AC-17, AC-18, AC-20, AC-24, AU-2, AU-12, CM-5, IA-2, IA-4, IA-
 
 Audit
 ^^^^^
-This is an organizational discussion around which accounts should be able to conduct which type of activities. Any documenation that the customer has should be compared to the accounts created on the Palo Alto NGFW to ensure they align with the corporate account structures.
+This is an organizational discussion around which accounts should be able to conduct which type of activities. Any documenation that the customer has should be compared to the accounts created on the Palo Alto NGFW to ensure they align with the corporate account structures. 
 
 
 Remediation
@@ -109,8 +120,9 @@ Products
 N/A
 
 
-AC-2(1)
--------
+Control or Control Enhancement Identifier
+-----------------------------------------
+AC-2(1) Account Management | Automated System Account Management
 
 
 Control or Control Name
@@ -135,7 +147,7 @@ Related Controls
 
 Audit
 ^^^^^
-For employee termination, the local accounts on the firewall would need to be removed and possibly deleted if the employee is no longer employed. Employee terminations could be automated with a SOAR product such as XSOAR.
+For employee termination, the local accounts on the firewall would need to be removed and possibly deleted if the employee is no longer employed. Employee terminations could be automated with a SOAR product such as XSOAR. 
 
 
 Remediation
@@ -150,7 +162,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(2)
+AC-2(2) Account Management | Automated Temporary and Emergency Account Management
 
 
 Control or Control Name
@@ -175,7 +187,7 @@ Related Controls
 
 Audit
 ^^^^^
-We do not have emergency accounts or temporary accounts in PAN-OS. Using a SOAR technology, an account could be created and destoryed but that is outsde the scope of PAN-OS's native abilities.
+We do not have emergency accounts or temporary accounts in PAN-OS. Using a SOAR technology, an account could be created and destoryed but that is outsde the scope of PAN-OS's native abilities. 
 
 
 Remediation
@@ -190,7 +202,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(3)
+AC-2(3) Account Management | Disable Accounts
 
 
 Control or Control Name
@@ -234,7 +246,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(4)
+AC-2(4) Account Management | Automated Audit Actions
 
 
 Control or Control Name
@@ -259,7 +271,7 @@ AU-2, AU-6
 
 Audit
 ^^^^^
-This is a manual review process. Or it could be automated with XSOAR.
+This is a manual review process. Or it could be automated with XSOAR. 
 
 
 Remediation
@@ -274,7 +286,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(5)
+AC-2(5) Account Management | Inactivity Logout
 
 
 Control or Control Name
@@ -307,7 +319,7 @@ Remediation
 ^^^^^^^^^^^
 Go to Device > Setup > Management > Authentication Settings:
 
-Set the Idle Timeout value to your desired setting. By default, admin sessions will not time out until 60 minutes have elapsed.
+Set the Idle Timeout value to your desired setting. By default, admin sessions will not time out until 60 minutes have elapsed. 
 
 
 Products
@@ -317,7 +329,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(6)
+AC-2(6) Account Management | Dynamic Privilege Management
 
 
 Control or Control Name
@@ -342,12 +354,12 @@ AC-16
 
 Audit
 ^^^^^
-This is supported by the Palo Alto NGFW.
+This is supported by the Palo Alto NGFW. 
 
 
 Remediation
 ^^^^^^^^^^^
-On the NGFW, Device->Administrators->(Select User)->Administrator Type, then select Dynamic. Now on Panorama, the role can be dynamically updated by Panorama.
+On the NGFW, Device->Administrators->(Select User)->Administrator Type, then select Dynamic. Now on Panorama, the role can be dynamically updated by Panorama. 
 
 
 Products
@@ -357,7 +369,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(7)
+AC-2(7) Account Management | Privileged User Accounts
 
 
 Control or Control Name
@@ -385,12 +397,12 @@ AC-3
 
 Audit
 ^^^^^
-This is supported by the Palo Alto NGFW.
+This is supported by the Palo Alto NGFW. 
 
 
 Remediation
 ^^^^^^^^^^^
-On the NGFW, Device->Administrators->(Select User)->Administrator Type, then select Role Based.
+On the NGFW, Device->Administrators->(Select User)->Administrator Type, then select Role Based.  
 
 
 Products
@@ -400,7 +412,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(8)
+AC-2(8) Account Management | Dynamic Account Management
 
 
 Control or Control Name
@@ -440,7 +452,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(9)
+AC-2(9) Account Management | Restrictions on Use of Shared and Group Accounts
 
 
 Control or Control Name
@@ -480,7 +492,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(10)
+AC-2(10) Account Management | Shared and Group Account Credential Change
 
 
 Control or Control Name
@@ -520,7 +532,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(11)
+AC-2(11) Account Management | Usage Conditions
 
 
 Control or Control Name
@@ -545,7 +557,7 @@ Related Controls
 
 Audit
 ^^^^^
-The Palo Alto NGFW does not allow under-priviledged actions by a particular user/group. In the GUI, certain non-permitted functions will be greyed out as to deny the user that capability. So there will not be a log event for an attempt to essentially escalate privileges as the user is unable to perform them at all. In the Monitor->Configuration section, there is a Results section which will state Success or Fail. Fail could be for many reasons such as unauthorized or the configuration is invalid.
+The Palo Alto NGFW does not allow under-priviledged actions by a particular user/group. In the GUI, certain non-permitted functions will be greyed out as to deny the user that capability. So there will not be a log event for an attempt to essentially escalate privileges as the user is unable to perform them at all. In the Monitor->Configuration section, there is a Results section which will state Success or Fail. Fail could be for many reasons such as unauthorized or the configuration is invalid.  
 
 
 Remediation
@@ -560,7 +572,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(12)
+AC-2(12) Account Management | Account Monitoring for Atypical Usage
 
 
 Control or Control Name
@@ -586,7 +598,7 @@ AU-6, AU-7, CA-7, IR-8, SI-4
 
 Audit
 ^^^^^
-This would be a manual review to ensure that administrators are operating in a normal manner.
+This would be a manual review to ensure that administrators are operating in a normal manner. 
 
 
 Remediation
@@ -601,7 +613,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(13)
+AC-2(13) Account Management | Disable Accounts for High-risk Individuals
 
 
 Control or Control Name
@@ -626,7 +638,7 @@ AU-6, SI-4
 
 Audit
 ^^^^^
-Accounts cannot be deleted on the NGFW firewall. It is recommended to change the password or simply delete the account in the event of an account compromise or emegency action required.
+Accounts cannot be deleted on the NGFW firewall. It is recommended to change the password or simply delete the account in the event of an account compromise or emegency action required. 
 
 
 Remediation
@@ -641,7 +653,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-2(14)
+AC-2(14) Account Management | Prohibit Specific Account Types
 
 
 Control or Control Name
@@ -681,7 +693,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3
+AC-3 Access Enforcement
 
 
 Control or Control Name
@@ -706,7 +718,7 @@ AC-2, AC-4, AC-5, AC-6, AC-16, AC-17, AC-18, AC-19, AC-20, AC-21, AC-22, AC-24, 
 
 Audit
 ^^^^^
-Each account should be associated with a static or dynamic role.
+Each account should be associated with a static or dynamic role. 
 
 
 Remediation
@@ -721,7 +733,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(1)
+AC-3(1) Access Enforcement | Restricted Access to Privileged Functions
 
 
 Control or Control Name
@@ -746,12 +758,12 @@ Related Controls
 
 Audit
 ^^^^^
-NGFW configuration logs should be searched for Result=Failed status and investigated.
+NGFW configuration logs should be searched for Result=Failed status and investigated. 
 
 
 Remediation
 ^^^^^^^^^^^
-NGFW configuration logs should be searched for Result=Failed status and investigated.
+NGFW configuration logs should be searched for Result=Failed status and investigated. 
 
 
 Products
@@ -761,7 +773,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(2)
+AC-3(2) Access Enforcement | Dual Authorization
 
 
 Control or Control Name
@@ -786,7 +798,7 @@ Related Controls
 
 Audit
 ^^^^^
-A workflow approval of changes is not currently supported in Panorama as of 1/21/2021. This control should be monitord for imporvements on the Panorama side. As a workaround, RBAC could be used in Panaroma to disallow administrators from pushing config changes to devices. Only allow admins to 'save to Panorama.' Then in a maintanence window, once approved, and superadmin could push the changes to the devices.
+A workflow approval of changes is not currently supported in Panorama as of 1/21/2021. This control should be monitord for imporvements on the Panorama side. As a workaround, RBAC could be used in Panaroma to disallow administrators from pushing config changes to devices. Only allow admins to 'save to Panorama.' Then in a maintanence window, once approved, and superadmin could push the changes to the devices. 
 
 
 Remediation
@@ -801,7 +813,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(3)
+AC-3(3) Access Enforcement | Mandatory Access Control
 
 
 Control or Control Name
@@ -835,7 +847,7 @@ SC-7
 
 Audit
 ^^^^^
-This is a policy within the environment and cannot be addressed within the Palo Alto NGFW.
+This is a policy within the environment and cannot be addressed within the Palo Alto NGFW. 
 
 
 Remediation
@@ -850,7 +862,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(4)
+AC-3(4) Access Enforcement | Discretionary Access Control
 
 
 Control or Control Name
@@ -880,7 +892,7 @@ Related Controls
 
 Audit
 ^^^^^
-This is a policy within the environment and cannot be addressed within the Palo Alto NGFW.
+This is a policy within the environment and cannot be addressed within the Palo Alto NGFW. 
 
 
 Remediation
@@ -895,7 +907,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(5)
+AC-3(5) Access Enforcement | Security-relevant Information
 
 
 Control or Control Name
@@ -935,7 +947,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(6)
+AC-3(6) Access Enforcement | Protection of User and System Information
 
 
 Control or Control Name
@@ -960,7 +972,7 @@ Related Controls
 
 Audit
 ^^^^^
-This system is password and/or certificated protected from unauthorized administrators.
+This system is password and/or certificated protected from unauthorized administrators. 
 
 
 Remediation
@@ -975,7 +987,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(7)
+AC-3(7) Access Enforcement | Role-based Access Control
 
 
 Control or Control Name
@@ -1000,7 +1012,7 @@ Related Controls
 
 Audit
 ^^^^^
-The Palo Alto NGFW supports RBAC for users and groups.  During an audit, we should print out the various groups and permissions of such groups.
+The Palo Alto NGFW supports RBAC for users and groups.  During an audit, we should print out the various groups and permissions of such groups. 
 
 
 Remediation
@@ -1015,7 +1027,7 @@ NGFW,Panoroma
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(8)
+AC-3(8) Access Enforcement | Revocation of Access Authorizations
 
 
 Control or Control Name
@@ -1055,7 +1067,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(9)
+AC-3(9) Access Enforcement | Controlled Release
 
 
 Control or Control Name
@@ -1083,7 +1095,7 @@ CA-3, PT-2, PT-3, PT-8, SA-9, SC-16
 
 Audit
 ^^^^^
-This control is a procedural control in which information should not be passed outside of the owning groups.
+This control is a procedural control in which information should not be passed outside of the owning groups. 
 
 
 Remediation
@@ -1098,7 +1110,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(10)
+AC-3(10) Access Enforcement | Audited Override of Access Control Mechanisms
 
 
 Control or Control Name
@@ -1123,7 +1135,7 @@ AU-2, AU-6, AU-10, AU-12, AU-14
 
 Audit
 ^^^^^
-This is an emergency account that could be used by the Palo Alto NGFW. Products such as CyberARK specialize in this area, but this is not something natively supported by Palo Alto Networks.
+This is an emergency account that could be used by the Palo Alto NGFW. Products such as CyberARK specialize in this area, but this is not something natively supported by Palo Alto Networks. 
 
 
 Remediation
@@ -1138,7 +1150,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(11)
+AC-3(11) Access Enforcement | Restrict Access to Specific Information Types
 
 
 Control or Control Name
@@ -1178,7 +1190,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(12)
+AC-3(12) Access Enforcement | Assert and Enforce Application Access
 
 
 Control or Control Name
@@ -1205,7 +1217,7 @@ CM-7
 
 Audit
 ^^^^^
-This Palo Alto NGFW appliance is not a typical system that needs to require access to external components.
+This Palo Alto NGFW appliance is not a typical system that needs to require access to external components. 
 
 
 Remediation
@@ -1220,7 +1232,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(13)
+AC-3(13) Access Enforcement | Attribute-based Access Control
 
 
 Control or Control Name
@@ -1245,12 +1257,12 @@ Related Controls
 
 Audit
 ^^^^^
-The Palo Alto NGFW can create policies to include time of day, user-ID, and Active Directory group membership.
+The Palo Alto NGFW can create policies to include time of day, user-ID, and Active Directory group membership. 
 
 
 Remediation
 ^^^^^^^^^^^
-The Palo Alto NGFW can create policies to include time of day, user-ID, and Active Directory group membership.
+The Palo Alto NGFW can create policies to include time of day, user-ID, and Active Directory group membership. 
 
 
 Products
@@ -1260,7 +1272,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(14)
+AC-3(14) Access Enforcement | Individual Access
 
 
 Control or Control Name
@@ -1300,7 +1312,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-3(15)
+AC-3(15) Access Enforcement | Discretionary and Mandatory Access Control
 
 
 Control or Control Name
@@ -1341,7 +1353,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4
+AC-4 Information Flow Enforcement
 
 
 Control or Control Name
@@ -1382,7 +1394,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(1)
+AC-4(1) Information Flow Enforcement | Object Security and Privacy Attributes
 
 
 Control or Control Name
@@ -1422,7 +1434,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(2)
+AC-4(2) Information Flow Enforcement | Processing Domains
 
 
 Control or Control Name
@@ -1462,7 +1474,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(3)
+AC-4(3) Information Flow Enforcement | Dynamic Information Flow Control
 
 
 Control or Control Name
@@ -1502,7 +1514,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(4)
+AC-4(4) Information Flow Enforcement | Flow Control of Encrypted Information
 
 
 Control or Control Name
@@ -1512,7 +1524,7 @@ Information Flow Enforcement | Flow Control of Encrypted Information
 
 Control Text
 ^^^^^^^^^^^^
-Prevent encrypted information from bypassing [Assignment: organization-defined information flow control mechanisms] by [Selection (one or more): decrypting the information; blocking the flow of the encrypted information; terminating communications sessions attempting to pass encrypted information;
+Prevent encrypted information from bypassing [Assignment: organization-defined information flow control mechanisms] by [Selection (one or more): decrypting the information; blocking the flow of the encrypted information; terminating communications sessions attempting to pass encrypted information; 
                      [Assignment: organization-defined procedure or method]
                   ].
 
@@ -1544,7 +1556,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(5)
+AC-4(5) Information Flow Enforcement | Embedded Data Types
 
 
 Control or Control Name
@@ -1584,7 +1596,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(6)
+AC-4(6) Information Flow Enforcement | Metadata
 
 
 Control or Control Name
@@ -1624,7 +1636,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(7)
+AC-4(7) Information Flow Enforcement | One-way Flow Mechanisms
 
 
 Control or Control Name
@@ -1664,7 +1676,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(8)
+AC-4(8) Information Flow Enforcement | Security and Privacy Policy Filters
 
 
 Control or Control Name
@@ -1705,7 +1717,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(9)
+AC-4(9) Information Flow Enforcement | Human Reviews
 
 
 Control or Control Name
@@ -1730,7 +1742,7 @@ Related Controls
 
 Audit
 ^^^^^
-Panorama does not currently support an approval workflow as of 1/21/2021.
+Panorama does not currently support an approval workflow as of 1/21/2021. 
 
 
 Remediation
@@ -1745,7 +1757,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(10)
+AC-4(10) Information Flow Enforcement | Enable and Disable Security or Privacy Policy Filters
 
 
 Control or Control Name
@@ -1770,7 +1782,7 @@ Related Controls
 
 Audit
 ^^^^^
-The NGFW by Palo Alto can filter on packet contents and file contents.
+The NGFW by Palo Alto can filter on packet contents and file contents. 
 
 
 Remediation
@@ -1785,7 +1797,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(11)
+AC-4(11) Information Flow Enforcement | Configuration of Security or Privacy Policy Filters
 
 
 Control or Control Name
@@ -1810,7 +1822,7 @@ Related Controls
 
 Audit
 ^^^^^
-The Palo Alto NGFW can do URL filtering and look for 'keywords' in HTTP packets and block them.
+The Palo Alto NGFW can do URL filtering and look for 'keywords' in HTTP packets and block them. 
 
 
 Remediation
@@ -1825,7 +1837,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(12)
+AC-4(12) Information Flow Enforcement | Data Type Identifiers
 
 
 Control or Control Name
@@ -1865,7 +1877,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(13)
+AC-4(13) Information Flow Enforcement | Decomposition into Policy-relevant Subcomponents
 
 
 Control or Control Name
@@ -1890,7 +1902,7 @@ Related Controls
 
 Audit
 ^^^^^
-By leveraging Security Profile Group in each security rule, we can address things such as source, destination, attachments and more.
+By leveraging Security Profile Group in each security rule, we can address things such as source, destination, attachments and more. 
 
 
 Remediation
@@ -1905,7 +1917,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(14)
+AC-4(14) Information Flow Enforcement | Security or Privacy Policy Filter Constraints
 
 
 Control or Control Name
@@ -1945,7 +1957,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(15)
+AC-4(15) Information Flow Enforcement | Detection of Unsanctioned Information
 
 
 Control or Control Name
@@ -1985,7 +1997,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(16)
+AC-4(16) Information Flow Enforcement | Information Transfers on Interconnected Systems
 
 
 Control or Control Name
@@ -2025,7 +2037,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(17)
+AC-4(17) Information Flow Enforcement | Domain Authentication
 
 
 Control or Control Name
@@ -2065,7 +2077,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(18)
+AC-4(18) Information Flow Enforcement | Security Attribute Binding
 
 
 Control or Control Name
@@ -2105,7 +2117,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(19)
+AC-4(19) Information Flow Enforcement | Validation of Metadata
 
 
 Control or Control Name
@@ -2145,7 +2157,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(20)
+AC-4(20) Information Flow Enforcement | Approved Solutions
 
 
 Control or Control Name
@@ -2185,7 +2197,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(21)
+AC-4(21) Information Flow Enforcement | Physical or Logical Separation of Information Flows
 
 
 Control or Control Name
@@ -2225,7 +2237,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(22)
+AC-4(22) Information Flow Enforcement | Access Only
 
 
 Control or Control Name
@@ -2265,7 +2277,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(23)
+AC-4(23) Information Flow Enforcement | Modify Non-releasable Information
 
 
 Control or Control Name
@@ -2290,7 +2302,7 @@ Related Controls
 
 Audit
 ^^^^^
-This would be addressed in the DLP function with the Palo Alto NGFW.
+This would be addressed in the DLP function with the Palo Alto NGFW. 
 
 
 Remediation
@@ -2305,7 +2317,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(24)
+AC-4(24) Information Flow Enforcement | Internal Normalized Format
 
 
 Control or Control Name
@@ -2345,7 +2357,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(25)
+AC-4(25) Information Flow Enforcement | Data Sanitization
 
 
 Control or Control Name
@@ -2385,7 +2397,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(26)
+AC-4(26) Information Flow Enforcement | Audit Filtering Actions
 
 
 Control or Control Name
@@ -2427,7 +2439,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(27)
+AC-4(27) Information Flow Enforcement | Redundant/independent Filtering Mechanisms
 
 
 Control or Control Name
@@ -2467,7 +2479,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(28)
+AC-4(28) Information Flow Enforcement | Linear Filter Pipelines
 
 
 Control or Control Name
@@ -2507,7 +2519,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(29)
+AC-4(29) Information Flow Enforcement | Filter Orchestration Engines
 
 
 Control or Control Name
@@ -2534,7 +2546,7 @@ Related Controls
 
 Audit
 ^^^^^
-The availability of the URL filtering engine, is dependant upon the underlying NGFW system. With a proper highly availale design, the URL filtering engine should be effective.
+The availability of the URL filtering engine, is dependant upon the underlying NGFW system. With a proper highly availale design, the URL filtering engine should be effective. 
 
 
 Remediation
@@ -2549,7 +2561,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(30)
+AC-4(30) Information Flow Enforcement | Filter Mechanisms Using Multiple Processes
 
 
 Control or Control Name
@@ -2574,7 +2586,7 @@ Related Controls
 
 Audit
 ^^^^^
-The availability of the URL filtering engine, is dependant upon the underlying NGFW system. With a proper highly availale design, the URL filtering engine should be effective.
+The availability of the URL filtering engine, is dependant upon the underlying NGFW system. With a proper highly availale design, the URL filtering engine should be effective. 
 
 
 Remediation
@@ -2589,7 +2601,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(31)
+AC-4(31) Information Flow Enforcement | Failed Content Transfer Prevention
 
 
 Control or Control Name
@@ -2614,7 +2626,7 @@ Related Controls
 
 Audit
 ^^^^^
-The availability of the URL filtering engine, is dependant upon the underlying NGFW system. With a proper highly availale design, the URL filtering engine should be effective.
+The availability of the URL filtering engine, is dependant upon the underlying NGFW system. With a proper highly availale design, the URL filtering engine should be effective. 
 
 
 Remediation
@@ -2629,7 +2641,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-4(32)
+AC-4(32) Information Flow Enforcement | Process Requirements for Information Transfer
 
 
 Control or Control Name
@@ -2658,7 +2670,7 @@ Related Controls
 
 Audit
 ^^^^^
-The URL filtering mechanism within Palo Alto's NGFW is not a complex filtering engine.
+The URL filtering mechanism within Palo Alto's NGFW is not a complex filtering engine. 
 
 
 Remediation
@@ -2673,7 +2685,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-5
+AC-5 Separation of Duties
 
 
 Control or Control Name
@@ -2699,7 +2711,7 @@ AC-2, AC-3, AC-6, AU-9, CM-5, CM-11, CP-9, IA-2, IA-5, MA-3, MA-5, PS-2, SA-8, S
 
 Audit
 ^^^^^
-Leveraging users and groups, a seperation can be achieved in the Palo Alto NGFW.
+Leveraging users and groups, a seperation can be achieved in the Palo Alto NGFW. 
 
 
 Remediation
@@ -2714,7 +2726,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6
+AC-6 Least Privilege
 
 
 Control or Control Name
@@ -2739,7 +2751,7 @@ AC-2, AC-3, AC-5, AC-16, CM-5, CM-11, PL-2, PM-12, SA-8, SA-15, SA-17, SC-38
 
 Audit
 ^^^^^
-Custom roles can be created on the NGFW that align with the business. It is incumbant upon the administrator to configure the least privelege roles.
+Custom roles can be created on the NGFW that align with the business. It is incumbant upon the administrator to configure the least privelege roles. 
 
 
 Remediation
@@ -2754,7 +2766,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(1)
+AC-6(1) Least Privilege | Authorize Access to Security Functions
 
 
 Control or Control Name
@@ -2781,7 +2793,7 @@ AC-17, AC-18, AC-19, AU-9, PE-2
 
 Audit
 ^^^^^
-Custom roles can be created on the NGFW that align with the business. It is incumbant upon the administrator to configure the least privelege roles.
+Custom roles can be created on the NGFW that align with the business. It is incumbant upon the administrator to configure the least privelege roles. 
 
 
 Remediation
@@ -2796,7 +2808,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(2)
+AC-6(2) Least Privilege | Non-privileged Access for Nonsecurity Functions
 
 
 Control or Control Name
@@ -2836,7 +2848,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(3)
+AC-6(3) Least Privilege | Network Access to Privileged Commands
 
 
 Control or Control Name
@@ -2876,7 +2888,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(4)
+AC-6(4) Least Privilege | Separate Processing Domains
 
 
 Control or Control Name
@@ -2916,7 +2928,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(5)
+AC-6(5) Least Privilege | Privileged Accounts
 
 
 Control or Control Name
@@ -2941,7 +2953,7 @@ IA-2, MA-3, MA-4
 
 Audit
 ^^^^^
-Palo Alto has a 'superuser' account which is the highest level privilege for an account. Ensure that only necessary individuals have this privilege.
+Palo Alto has a 'superuser' account which is the highest level privilege for an account. Ensure that only necessary individuals have this privilege. 
 
 
 Remediation
@@ -2956,7 +2968,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(6)
+AC-6(6) Least Privilege | Privileged Access by Non-organizational Users
 
 
 Control or Control Name
@@ -2981,7 +2993,7 @@ AC-18, AC-19, IA-2, IA-8
 
 Audit
 ^^^^^
-Contractor style account can be created.  However they should probably be removed after a certain period of time. Here we should list the account built on the NFGW and Panorama.
+Contractor style account can be created.  However they should probably be removed after a certain period of time. Here we should list the account built on the NFGW and Panorama. 
 
 
 Remediation
@@ -2996,7 +3008,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(7)
+AC-6(7) Least Privilege | Review of User Privileges
 
 
 Control or Control Name
@@ -3022,7 +3034,7 @@ CA-7
 
 Audit
 ^^^^^
-Same as AC-6(6) above. Accounts should be reviewed regularly.
+Same as AC-6(6) above. Accounts should be reviewed regularly. 
 
 
 Remediation
@@ -3037,7 +3049,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(8)
+AC-6(8) Least Privilege | Privilege Levels for Code Execution
 
 
 Control or Control Name
@@ -3077,7 +3089,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(9)
+AC-6(9) Least Privilege | Log Use of Privileged Functions
 
 
 Control or Control Name
@@ -3102,7 +3114,7 @@ AU-2, AU-3, AU-12
 
 Audit
 ^^^^^
-All activities of a user are logged in the system and configuration logs. When an administrator goes to the Monitor or Device tab, that activitiy is logged also.
+All activities of a user are logged in the system and configuration logs. When an administrator goes to the Monitor or Device tab, that activitiy is logged also. 
 
 
 Remediation
@@ -3117,7 +3129,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-6(10)
+AC-6(10) Least Privilege | Prohibit Non-privileged Users from Executing Privileged Functions
 
 
 Control or Control Name
@@ -3157,7 +3169,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-7
+AC-7 Unsuccessful Logon Attempts
 
 
 Control or Control Name
@@ -3187,12 +3199,12 @@ AC-2, AC-9, AU-2, AU-6, IA-5
 
 Audit
 ^^^^^
-Palo Alto Networks firewall can log account after X amount of bad login attempts. Those attempts are also logged.
+Palo Alto Networks firewall can log account after X amount of bad login attempts. Those attempts are also logged. 
 
 
 Remediation
 ^^^^^^^^^^^
-Log string is (  'failed authentication for user 'admin'.  Reason: Invalid username/password. From: 192.168.1.147.' )  Also verify that an account lockout value is set under the user in the Advanced section of the user.
+Log string is (  'failed authentication for user 'admin'.  Reason: Invalid username/password. From: 192.168.1.147.' )  Also verify that an account lockout value is set under the user in the Advanced section of the user. 
 
 
 Products
@@ -3202,7 +3214,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-7(1)
+AC-7(1) Unsuccessful Logon Attempts | Automatic Account Lock
 
 
 Control or Control Name
@@ -3242,7 +3254,7 @@ Products
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-7(2)
+AC-7(2) Unsuccessful Logon Attempts | Purge or Wipe Mobile Device
 
 
 Control or Control Name
@@ -3282,7 +3294,7 @@ Products
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-7(3)
+AC-7(3) Unsuccessful Logon Attempts | Biometric Attempt Limiting
 
 
 Control or Control Name
@@ -3322,7 +3334,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-7(4)
+AC-7(4) Unsuccessful Logon Attempts | Use of Alternate Factor
 
 
 Control or Control Name
@@ -3363,7 +3375,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-8
+AC-8 System Use Notification
 
 
 Control or Control Name
@@ -3397,7 +3409,7 @@ AC-14, PL-4, SI-4
 
 Audit
 ^^^^^
-Palo Alto NGFW's support the user of login banners and MOTD banners.
+Palo Alto NGFW's support the user of login banners and MOTD banners. 
 
 
 Remediation
@@ -3412,7 +3424,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-9
+AC-9 Previous Logon Notification
 
 
 Control or Control Name
@@ -3452,7 +3464,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-9(1)
+AC-9(1) Previous Logon Notification | Unsuccessful Logons
 
 
 Control or Control Name
@@ -3492,7 +3504,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-9(2)
+AC-9(2) Previous Logon Notification | Successful and Unsuccessful Logons
 
 
 Control or Control Name
@@ -3532,7 +3544,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-9(3)
+AC-9(3) Previous Logon Notification | Notification of Account Changes
 
 
 Control or Control Name
@@ -3572,7 +3584,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-9(4)
+AC-9(4) Previous Logon Notification | Additional Logon Information
 
 
 Control or Control Name
@@ -3602,7 +3614,7 @@ The IP address of the last login attempt is not found in the bottom banner of th
 
 Remediation
 ^^^^^^^^^^^
-Log string is (  'failed authentication for user 'admin'.  Reason: Invalid username/password. From: 192.168.1.147.' )  Also verify that an account lockout value is set under the user in the Advanced section of the user.
+Log string is (  'failed authentication for user 'admin'.  Reason: Invalid username/password. From: 192.168.1.147.' )  Also verify that an account lockout value is set under the user in the Advanced section of the user. 
 
 
 Products
@@ -3612,7 +3624,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-10
+AC-10 Concurrent Session Control
 
 
 Control or Control Name
@@ -3637,7 +3649,7 @@ SC-23
 
 Audit
 ^^^^^
-This cannot be controlled as of 1/21/2021.  This should result in a fail for this control.
+This cannot be controlled as of 1/21/2021.  This should result in a fail for this control. 
 
 
 Remediation
@@ -3652,7 +3664,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-11
+AC-11 Device Lock
 
 
 Control or Control Name
@@ -3678,7 +3690,7 @@ AC-2, AC-7, IA-11, PL-4
 
 Audit
 ^^^^^
-Palo Alto NGFW supports an idle timeout value that could be leveraged to acheive this behavior.
+Palo Alto NGFW supports an idle timeout value that could be leveraged to acheive this behavior. 
 
 
 Remediation
@@ -3693,7 +3705,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-11(1)
+AC-11(1) Device Lock | Pattern-hiding Displays
 
 
 Control or Control Name
@@ -3733,7 +3745,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-12
+AC-12 Session Termination
 
 
 Control or Control Name
@@ -3779,7 +3791,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-12(1)
+AC-12(1) Session Termination | User-initiated Logouts
 
 
 Control or Control Name
@@ -3825,7 +3837,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-12(2)
+AC-12(2) Session Termination | Termination Message
 
 
 Control or Control Name
@@ -3865,7 +3877,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-12(3)
+AC-12(3) Session Termination | Timeout Warning Message
 
 
 Control or Control Name
@@ -3905,7 +3917,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-13
+AC-13 Supervision and Review — Access Control
 
 
 Control or Control Name
@@ -3945,7 +3957,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-14
+AC-14 Permitted Actions Without Identification or Authentication
 
 
 Control or Control Name
@@ -3986,7 +3998,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-14(1)
+AC-14(1) Permitted Actions Without Identification or Authentication | Necessary Uses
 
 
 Control or Control Name
@@ -4026,7 +4038,7 @@ Products
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-15
+AC-15 Automated Marking
 
 
 Control or Control Name
@@ -4066,7 +4078,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16
+AC-16 Security and Privacy Attributes
 
 
 Control or Control Name
@@ -4098,7 +4110,7 @@ AC-3, AC-4, AC-6, AC-21, AC-25, AU-2, AU-10, MP-3, PE-22, PT-2, PT-5, SC-11, SC-
 
 Audit
 ^^^^^
-To address PII data, the NGFW can do complex data matching patterns to ensure that sensitive data does not leave the enclave in question.
+To address PII data, the NGFW can do complex data matching patterns to ensure that sensitive data does not leave the enclave in question. 
 
 
 Remediation
@@ -4113,7 +4125,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(1)
+AC-16(1) Security and Privacy Attributes | Dynamic Attribute Association
 
 
 Control or Control Name
@@ -4138,7 +4150,7 @@ Related Controls
 
 Audit
 ^^^^^
-Dynamic authorization profiles can be used with a 3rd party RADIUS server. The RADIUS server can be changed to reflect new authorization parameters and the NGFW can enforce said changes.
+Dynamic authorization profiles can be used with a 3rd party RADIUS server. The RADIUS server can be changed to reflect new authorization parameters and the NGFW can enforce said changes. 
 
 
 Remediation
@@ -4153,7 +4165,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(2)
+AC-16(2) Security and Privacy Attributes | Attribute Value Changes by Authorized Individuals
 
 
 Control or Control Name
@@ -4178,12 +4190,12 @@ Related Controls
 
 Audit
 ^^^^^
-Administrative actions can be controlled in a granular fashion on the NGFW or within the RADIUS server, if applicable.
+Administrative actions can be controlled in a granular fashion on the NGFW or within the RADIUS server, if applicable. 
 
 
 Remediation
 ^^^^^^^^^^^
-Show an admin profile where new users cannot be created.
+Show an admin profile where new users cannot be created. 
 
 
 Products
@@ -4193,7 +4205,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(3)
+AC-16(3) Security and Privacy Attributes | Maintenance of Attribute Associations by System
 
 
 Control or Control Name
@@ -4233,7 +4245,7 @@ Products
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(4)
+AC-16(4) Security and Privacy Attributes | Association of Attributes by Authorized Individuals
 
 
 Control or Control Name
@@ -4273,7 +4285,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(5)
+AC-16(5) Security and Privacy Attributes | Attribute Displays for Output Devices
 
 
 Control or Control Name
@@ -4313,7 +4325,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(6)
+AC-16(6) Security and Privacy Attributes | Maintenance of Attribute Association by Organization
 
 
 Control or Control Name
@@ -4353,7 +4365,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(7)
+AC-16(7) Security and Privacy Attributes | Consistent Attribute Interpretation
 
 
 Control or Control Name
@@ -4393,7 +4405,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(8)
+AC-16(8) Security and Privacy Attributes | Association Techniques and Technologies
 
 
 Control or Control Name
@@ -4433,7 +4445,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(9)
+AC-16(9) Security and Privacy Attributes | Attribute Reassignment — Regrading Mechanisms
 
 
 Control or Control Name
@@ -4473,7 +4485,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-16(10)
+AC-16(10) Security and Privacy Attributes | Attribute Configuration by Authorized Individuals
 
 
 Control or Control Name
@@ -4513,7 +4525,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17
+AC-17 Remote Access
 
 
 Control or Control Name
@@ -4539,12 +4551,12 @@ AC-2, AC-3, AC-4, AC-18, AC-19, AC-20, CA-3, CM-10, IA-2, IA-3, IA-8, MA-4, PE-1
 
 Audit
 ^^^^^
-Palo Alto NGFW's support the use of VPN's through Global Protect which can be client or clientless based.
+Palo Alto NGFW's support the use of VPN's through Global Protect which can be client or clientless based. 
 
 
 Remediation
 ^^^^^^^^^^^
-Check for the configuration of Global Protect if it applies.
+Check for the configuration of Global Protect if it applies. 
 
 
 Products
@@ -4554,7 +4566,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(1)
+AC-17(1) Remote Access | Monitoring and Control
 
 
 Control or Control Name
@@ -4594,7 +4606,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(2)
+AC-17(2) Remote Access | Protection of Confidentiality and Integrity Using Encryption
 
 
 Control or Control Name
@@ -4619,7 +4631,7 @@ SC-8, SC-12, SC-13
 
 Audit
 ^^^^^
-Global Protect can support TLS 1.3.
+Global Protect can support TLS 1.3. 
 
 
 Remediation
@@ -4634,7 +4646,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(3)
+AC-17(3) Remote Access | Managed Access Control Points
 
 
 Control or Control Name
@@ -4659,7 +4671,7 @@ SC-7
 
 Audit
 ^^^^^
-Palo Alto NGFW's can route protected traffic down virtual interfaces called tunnel interfaces.
+Palo Alto NGFW's can route protected traffic down virtual interfaces called tunnel interfaces. 
 
 
 Remediation
@@ -4674,7 +4686,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(4)
+AC-17(4) Remote Access | Privileged Commands and Access
 
 
 Control or Control Name
@@ -4700,12 +4712,12 @@ AC-6, SC-12, SC-13
 
 Audit
 ^^^^^
-This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN.
+This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN. 
 
 
 Remediation
 ^^^^^^^^^^^
-This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN.
+This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN. 
 
 
 Products
@@ -4715,7 +4727,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(5)
+AC-17(5) Remote Access | Monitoring for Unauthorized Connections
 
 
 Control or Control Name
@@ -4755,7 +4767,7 @@ Products
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(6)
+AC-17(6) Remote Access | Protection of Mechanism Information
 
 
 Control or Control Name
@@ -4780,12 +4792,12 @@ AT-2, AT-3, PS-6
 
 Audit
 ^^^^^
-VPN users should only have enough permission to VPN into the applicable gateway. No other permissions should be granted.
+VPN users should only have enough permission to VPN into the applicable gateway. No other permissions should be granted. 
 
 
 Remediation
 ^^^^^^^^^^^
-Determine where the users are, e.g LOCAL DB Or RADIUS and review thier permissions.
+Determine where the users are, e.g LOCAL DB Or RADIUS and review thier permissions. 
 
 
 Products
@@ -4795,7 +4807,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(7)
+AC-17(7) Remote Access | Additional Protection for Security Function Access
 
 
 Control or Control Name
@@ -4835,7 +4847,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(8)
+AC-17(8) Remote Access | Disable Nonsecure Network Protocols
 
 
 Control or Control Name
@@ -4875,7 +4887,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(9)
+AC-17(9) Remote Access | Disconnect or Disable Access
 
 
 Control or Control Name
@@ -4925,7 +4937,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-17(10)
+AC-17(10) Remote Access | Authenticate Remote Commands
 
 
 Control or Control Name
@@ -4950,12 +4962,12 @@ SC-12, SC-13, SC-23
 
 Audit
 ^^^^^
-This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN.
+This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN. 
 
 
 Remediation
 ^^^^^^^^^^^
-This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN.
+This would relate to vulnerabilities on the current version of PAN-OS. We should do a bug search on this particular version around clientless VPN. 
 
 
 Products
@@ -4965,7 +4977,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-18
+AC-18 Wireless Access
 
 
 Control or Control Name
@@ -4991,7 +5003,7 @@ AC-2, AC-3, AC-17, AC-19, CA-9, CM-7, IA-2, IA-3, IA-8, PL-4, SC-40, SC-43, SI-4
 
 Audit
 ^^^^^
-Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies.
+Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies. 
 
 
 Remediation
@@ -5006,7 +5018,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-18(1)
+AC-18(1) Wireless Access | Authentication and Encryption
 
 
 Control or Control Name
@@ -5031,7 +5043,7 @@ SC-8, SC-13
 
 Audit
 ^^^^^
-Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies.
+Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies. 
 
 
 Remediation
@@ -5046,7 +5058,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-18(2)
+AC-18(2) Wireless Access | Monitoring Unauthorized Connections
 
 
 Control or Control Name
@@ -5086,7 +5098,7 @@ Products
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-18(3)
+AC-18(3) Wireless Access | Disable Wireless Networking
 
 
 Control or Control Name
@@ -5111,7 +5123,7 @@ Related Controls
 
 Audit
 ^^^^^
-Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies.
+Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies. 
 
 
 Remediation
@@ -5126,7 +5138,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-18(4)
+AC-18(4) Wireless Access | Restrict Configurations by Users
 
 
 Control or Control Name
@@ -5151,7 +5163,7 @@ SC-7, SC-15
 
 Audit
 ^^^^^
-Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies.
+Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies. 
 
 
 Remediation
@@ -5166,7 +5178,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-18(5)
+AC-18(5) Wireless Access | Antennas and Transmission Power Levels
 
 
 Control or Control Name
@@ -5191,7 +5203,7 @@ PE-19
 
 Audit
 ^^^^^
-Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies.
+Palo Alto Networks NGFW do not support 802.11 or any other RF based technologies. 
 
 
 Remediation
@@ -5206,7 +5218,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-19
+AC-19 Access Control for Mobile Devices
 
 
 Control or Control Name
@@ -5234,12 +5246,12 @@ AC-3, AC-4, AC-7, AC-11, AC-17, AC-18, AC-20, CA-9, CM-2, CM-6, IA-2, IA-3, MP-2
 
 Audit
 ^^^^^
-Using Global Protect's HIP functionality, the Palo Alto NGFW can determine if a mobile device is a corporate asset or not.
+Using Global Protect's HIP functionality, the Palo Alto NGFW can determine if a mobile device is a corporate asset or not. 
 
 
 Remediation
 ^^^^^^^^^^^
-Check for the use of HIP in the GP Settings.
+Check for the use of HIP in the GP Settings. 
 
 
 Products
@@ -5249,7 +5261,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-19(1)
+AC-19(1) Access Control for Mobile Devices | Use of Writable and Portable Storage Devices
 
 
 Control or Control Name
@@ -5289,7 +5301,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-19(2)
+AC-19(2) Access Control for Mobile Devices | Use of Personally Owned Portable Storage Devices
 
 
 Control or Control Name
@@ -5329,7 +5341,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-19(3)
+AC-19(3) Access Control for Mobile Devices | Use of Portable Storage Devices with No Identifiable Owner
 
 
 Control or Control Name
@@ -5369,7 +5381,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-19(4)
+AC-19(4) Access Control for Mobile Devices | Restrictions for Classified Information
 
 
 Control or Control Name
@@ -5400,12 +5412,12 @@ CM-8, IR-4
 
 Audit
 ^^^^^
-Using Global Protect's HIP functionality, the Palo Alto NGFW can determine if a mobile device is a corporate asset or not.
+Using Global Protect's HIP functionality, the Palo Alto NGFW can determine if a mobile device is a corporate asset or not. 
 
 
 Remediation
 ^^^^^^^^^^^
-Check for the use of HIP in the GP Settings.
+Check for the use of HIP in the GP Settings. 
 
 
 Products
@@ -5415,7 +5427,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-19(5)
+AC-19(5) Access Control for Mobile Devices | Full Device and Container-based Encryption
 
 
 Control or Control Name
@@ -5440,7 +5452,7 @@ SC-13, SC-28
 
 Audit
 ^^^^^
-The Palo Alto NGFW is a closed system appliance. The administrator does not have access to the operating system or the underlying system.
+The Palo Alto NGFW is a closed system appliance. The administrator does not have access to the operating system or the underlying system. 
 
 
 Remediation
@@ -5455,7 +5467,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20
+AC-20 Use of External Systems
 
 
 Control or Control Name
@@ -5465,9 +5477,9 @@ Use of External Systems
 
 Control Text
 ^^^^^^^^^^^^
-Establish [Selection (one or more):
+Establish [Selection (one or more): 
                   [Assignment: organization-defined terms and conditions]
-               ;
+               ; 
                   [Assignment: organization-defined controls asserted to be implemented on external systems]
                ], consistent with the trust relationships established with other organizations owning, operating, and/or maintaining external systems, allowing authorized individuals to:
 a. Access the system from external systems; and
@@ -5488,7 +5500,7 @@ AC-2, AC-3, AC-17, AC-19, CA-3, PL-2, PL-4, SA-9, SC-7
 
 Audit
 ^^^^^
-Depending on the firewall deployment, external systems may or may not connect through the NGFW system. In the case of a DMZ, external systems will be connecting to the firewall from untrusted sources.
+Depending on the firewall deployment, external systems may or may not connect through the NGFW system. In the case of a DMZ, external systems will be connecting to the firewall from untrusted sources. 
 
 
 Remediation
@@ -5503,7 +5515,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20(1)
+AC-20(1) Use of External Systems | Limits on Authorized Use
 
 
 Control or Control Name
@@ -5530,7 +5542,7 @@ CA-2
 
 Audit
 ^^^^^
-Depending on the firewall deployment, external systems may or may not connect through the NGFW system. In the case of a DMZ, external systems will be connecting to the firewall from untrusted sources.
+Depending on the firewall deployment, external systems may or may not connect through the NGFW system. In the case of a DMZ, external systems will be connecting to the firewall from untrusted sources. 
 
 
 Remediation
@@ -5545,7 +5557,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20(2)
+AC-20(2) Use of External Systems | Portable Storage Devices — Restricted Use
 
 
 Control or Control Name
@@ -5585,7 +5597,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20(3)
+AC-20(3) Use of External Systems | Non-organizationally Owned Systems  — Restricted Use
 
 
 Control or Control Name
@@ -5625,7 +5637,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20(4)
+AC-20(4) Use of External Systems | Network Accessible Storage Devices
 
 
 Control or Control Name
@@ -5665,7 +5677,7 @@ NGFW,Panorama
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20(5)
+AC-20(5) Use of External Systems | Portable Storage Devices — Prohibited Use
 
 
 Control or Control Name
@@ -5705,7 +5717,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-20(6)
+AC-20(6) Use of External Systems | Non-organizationally Owned Systems — Prohibited Use
 
 
 Control or Control Name
@@ -5745,7 +5757,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-21
+AC-21 Information Sharing
 
 
 Control or Control Name
@@ -5786,7 +5798,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-21(1)
+AC-21(1) Information Sharing | Automated Decision Support
 
 
 Control or Control Name
@@ -5826,7 +5838,7 @@ XSOAR
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-21(2)
+AC-21(2) Information Sharing | Information Search and Retrieval
 
 
 Control or Control Name
@@ -5866,7 +5878,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-22
+AC-22 Publicly Accessible Content
 
 
 Control or Control Name
@@ -5909,7 +5921,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-23
+AC-23 Data Mining Protection
 
 
 Control or Control Name
@@ -5951,7 +5963,7 @@ NGFW,Panorama,Prisma SaaS
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-24
+AC-24 Access Control Decisions
 
 
 Control or Control Name
@@ -5991,7 +6003,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-24(1)
+AC-24(1) Access Control Decisions | Transmit Access Authorization Information
 
 
 Control or Control Name
@@ -6031,7 +6043,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-24(2)
+AC-24(2) Access Control Decisions | No User or Process Identity
 
 
 Control or Control Name
@@ -6071,7 +6083,7 @@ N/A
 
 Control or Control Enhancement Identifier
 -----------------------------------------
-AC-25
+AC-25 Reference Monitor
 
 
 Control or Control Name
